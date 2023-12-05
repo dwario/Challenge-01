@@ -1,123 +1,38 @@
-# Challenge-01
+# Problema del Mono y las Bananas
 
-Debajo
-(
-�
-,
-�
-)
-Debajo ( x ,y ): El objeto
-�
-Xestá debajo del objeto
-�
-y.
-Sobre
-(
-�
-,
-�
-)
-Sobre ( x ,y ): El objeto
-�
-Xestá sobre el objeto
-�
-y.
-Mononucleosis infecciosa
-(
-�
-)
-Mono ( x ):
-�
-Xes el mono.
-Reglas:
+## Descripción del Problema
 
-∀
-�
-∀
-�
-(
-Debajo
-(
-�
-,
-�
-)
-→
-Sobre
-(
-�
-,
-�
-)
-)
-∀ x ∀ y( Debajo ( x ,y )→Sobre ( y ,X ) ): Si algo está debajo de otra cosa, entonces la otra cosa está sobre la primera.
+Se tiene un mono en una habitación que contiene una pila de bananas y una cuerda suspendida del techo. El objetivo es que el mono alcance las bananas utilizando la cuerda. Sin embargo, hay ciertas reglas y restricciones que deben seguirse.
 
-Mononucleosis infecciosa
-(
-metro
-)
-Mono ( m ): Hay un mono.
+## Reglas del Problema
 
-∃
-�
-∃
-�
-(
-Plátanos
-(
-�
-)
-∧
-Debajo
-(
-�
-,
-�
-)
-∧
-Mononucleosis infecciosa
-(
-�
-)
-)
-∃ x ∃ y( Plátanos ( x )∧Debajo ( x ,y )∧Mono ( y ) ): Existen plátanos
-�
-Xque estan debajo del mono
-�
-y.
+1. El mono solo puede subir la cuerda o bajarla, no puede simplemente trepar por ella.
+2. En cada paso, el mono puede tomar una de las siguientes acciones:
+   - Subir la cuerda hacia arriba.
+   - Bajar la cuerda hacia abajo.
+   - Tomar una banana de la pila.
 
-Ahora, con estas reglas lógicas, podemos inferir que hay un conjunto de acciones que el mono debe realizar para alcanzar las acciones bananas:
+3. El mono no puede realizar dos acciones consecutivas en la misma dirección. Por ejemplo, si subió la cuerda en el paso anterior, debe bajarla o tomar una banana en el siguiente paso.
 
-Agente de mudanzas
-(
-metro
-,
-�
-)
-motor ( m ,C ): El mono
-metro
-metromueve la caja
-�
-C.
-Subirse
-(
-metro
-,
-�
-)
-Subirse ( m ,C ): El mono
-metro
-metrose sube a la caja
-�
-C.
-Coger
-(
-metro
-,
-�
-)
-Coger ( m ,b ): El mono
-metro
-metrocoge las bananas
-�
-b.
+4. En cualquier momento, el mono puede decidir abandonar la cuerda y recoger bananas, pero una vez que ha tomado esa decisión, no puede volver a subir la cuerda hasta el siguiente paso.
+
+## Objetivo del Problema
+
+El objetivo es determinar una secuencia de acciones que permita al mono alcanzar las bananas siguiendo las reglas establecidas.
+
+## Ejemplo
+
+Supongamos que hay tres bananas en la pila. Una posible secuencia de acciones podría ser:
+
+1. Subir la cuerda.
+2. Tomar una banana.
+3. Bajar la cuerda.
+4. Subir la cuerda.
+5. Tomar una banana.
+6. Bajar la cuerda.
+7. Subir la cuerda.
+8. Tomar la última banana.
+
+En esta secuencia, el mono alcanza todas las bananas siguiendo las reglas establecidas.
+
+
